@@ -223,7 +223,7 @@
     }
 
     .donations {
-        margin-left: auto;
+        display: none;
     }
 
     .menu-item {
@@ -252,7 +252,7 @@
     }
 
     .donations {
-        margin-left: 0;
+        display: none;
     }
 
     .menu {
