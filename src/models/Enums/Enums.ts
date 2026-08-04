@@ -24,3 +24,24 @@ export enum StatusAnimal {
     FALECIDO = "FALECIDO"
 
 }
+
+
+
+export enum TipoNecessidade {
+
+    MEDICAMENTO = "MEDICAMENTO",
+    ALIMENTACAO = "ALIMENTACAO",
+    HIGIENE = "HIGIENE",
+    ENRIQUECIMENTO = "ENRIQUECIMENTO"
+
+}
+
+
+
+export enum TipoCuidador {
+
+    VETERINARIO = "VETERINÁRIO",
+    VOLUNTARIO = "VOLUNTÁRIO",
+    ESTAGIARIO = "ESTAGIÁRIO"
+
+}
