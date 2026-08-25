@@ -10,10 +10,7 @@ export class AlertaEstoque {
   private _suprimentoId: string;
 
 
-  constructor(
-    id: string, dataAlerta: Date, mensagem: string, 
-    suprimentoId: string, status: StatusAlerta = StatusAlerta.ATIVO
-  ) {
+  constructor(id: string, dataAlerta: Date, mensagem: string, suprimentoId: string, status: StatusAlerta = StatusAlerta.ATIVO) {
     this._id = id;
     this._dataAlerta = dataAlerta;
     this._mensagem = mensagem;
@@ -22,24 +19,51 @@ export class AlertaEstoque {
   }
 
 
-  public get id() { return this._id; }
+  public get id() {
+    return this._id;
+  }
+ 
+
+  public get dataAlerta() {
+    return this._dataAlerta;
+  }
+
+  public set dataAlerta(dataAlerta: Date) {
+    this._dataAlerta = dataAlerta;
+  }
+
+
+  public get mensagem() {
+    return this._mensagem;
+  }
+
+  public set mensagem(mensagem: string) {
+    this._mensagem = mensagem;
+  }
+
+
+  public get status() {
+    return this._status;
+  }
   
-  public get dataAlerta() { return this._dataAlerta; }
-  public set dataAlerta(dataAlerta: Date) { this._dataAlerta = dataAlerta; }
+  public set status(status: StatusAlerta) {
+    this._status = status;
+  }
 
-  public get mensagem() { return this._mensagem; }
-  public set mensagem(mensagem: string) { this._mensagem = mensagem; }
 
-  public get status() { return this._status; }
-  public set status(status: StatusAlerta) { this._status = status; }
-
-  public get suprimentoId() { return this._suprimentoId; }
-  public set suprimentoId(suprimentoId: string) { this._suprimentoId = suprimentoId; }
+  public get suprimentoId() {
+    return this._suprimentoId;
+  }
+  
+  public set suprimentoId(suprimentoId: string) {
+    this._suprimentoId = suprimentoId;
+  }
 
 
 
   // Métodos de Negócio
-  public marcarComoResolvido(): void {
+  public marcarComoResolvido() {
     this._status = StatusAlerta.RESOLVIDO;
   }
+  
 }

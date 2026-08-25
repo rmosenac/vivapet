@@ -19,20 +19,52 @@ export class Doador {
   }
 
 
-  public get id() { return this._id; }
+  public get id() {
+    return this._id;
+  }
   
-  public get nome() { return this._nome; }
-  public set nome(nome: string) { this._nome = nome; }
 
-  public get cpf() { return this._cpf; }
-  public set cpf(cpf: string) { this._cpf = cpf; }
+  public get nome() {
+    return this._nome;
+  }
 
-  public get telefone() { return this._telefone; }
-  public set telefone(telefone: string) { this._telefone = telefone; }
+  public set nome(nome: string) {
+    this._nome = nome;
+  }
 
-  public get email() { return this._email; }
-  public set email(email: string) { this._email = email; }
 
-  public get endereco() { return this._endereco; }
-  public set endereco(endereco: string) { this._endereco = endereco; }
+  public get cpf() {
+    return this._cpf;
+  }
+
+  public set cpf(cpf: string) {
+    this._cpf = cpf;
+  }
+
+
+  public get telefone() {
+    return this._telefone;
+  }
+
+  public set telefone(telefone: string) {
+    this._telefone = telefone;
+  }
+
+
+  public get email() {
+    return this._email;
+  }
+
+  public set email(email: string) {
+    this._email = email;
+  }
+
+
+  public get endereco() {
+    return this._endereco;
+  }
+
+  public set endereco(endereco: string) {
+    this._endereco = endereco;
+  }
 }

@@ -19,26 +19,27 @@ export class Necessidade {
     return this._id;
   }
 
+
   public get descricao() {
     return this._descricao;
   }
-
-  public get observacoes() {
-    return this._observacoes;
-  }
-
-  public get ativa() {
-    return this._ativa;
-  }
-
-
 
   public set descricao(descricao: string) {
     this._descricao = descricao;
   }
 
+
+  public get observacoes() {
+    return this._observacoes;
+  }
+
   public set observacoes(observacoes: string) {
     this._observacoes = observacoes;
+  }
+
+
+  public get ativa() {
+    return this._ativa;
   }
 
   public set ativa(ativa: boolean) {

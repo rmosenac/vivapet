@@ -19,17 +19,43 @@ export class Doacao {
   }
 
 
-  public get id() { return this._id; }
+  public get id() {
+    return this._id;
+  }
   
-  public get dataDoacao() { return this._dataDoacao; }
-  public set dataDoacao(dataDoacao: Date) { this._dataDoacao = dataDoacao; }
 
-  public get observacoes() { return this._observacoes; }
-  public set observacoes(observacoes: string) { this._observacoes = observacoes; }
+  public get dataDoacao() {
+    return this._dataDoacao;
+  }
 
-  public get doadorId() { return this._doadorId; }
-  public set doadorId(doadorId: string) { this._doadorId = doadorId; }
+  public set dataDoacao(dataDoacao: Date) {
+    this._dataDoacao = dataDoacao;
+  }
 
-  public get itens() { return this._itens; }
-  public set itens(itens: ItemDoacao[]) { this._itens = itens; }
+
+  public get observacoes() {
+    return this._observacoes;
+  }
+
+  public set observacoes(observacoes: string) {
+    this._observacoes = observacoes;
+  }
+
+
+  public get doadorId() {
+    return this._doadorId;
+  }
+
+  public set doadorId(doadorId: string) {
+    this._doadorId = doadorId;
+  }
+
+
+  public get itens() {
+    return this._itens;
+  }
+
+  public set itens(itens: ItemDoacao[]) {
+    this._itens = itens;
+  }
 }

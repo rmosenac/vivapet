@@ -10,11 +10,7 @@ export class RegistroUso {
   private _suprimentoId: string;
 
 
-  constructor(
-    id: string, dataUso: Date, quantidadeUsada: number, 
-    cuidadorId: string, animalId: string, suprimentoId: string, 
-    observacoes: string = ''
-  ) {
+  constructor(id: string, dataUso: Date, quantidadeUsada: number, cuidadorId: string, animalId: string, suprimentoId: string, observacoes: string = '') {
     this._id = id;
     this._dataUso = dataUso;
     this._quantidadeUsada = Math.floor(quantidadeUsada);
@@ -25,25 +21,61 @@ export class RegistroUso {
   }
 
 
-  public get id() { return this._id; }
+  public get id() {
+    return this._id;
+  }
   
-  public get dataUso() { return this._dataUso; }
-  public set dataUso(dataUso: Date) { this._dataUso = dataUso; }
 
-  public get quantidadeUsada() { return this._quantidadeUsada; }
+  public get dataUso() {
+    return this._dataUso;
+  }
+
+  public set dataUso(dataUso: Date) {
+    this._dataUso = dataUso;
+  }
+
+
+  public get quantidadeUsada() {
+    return this._quantidadeUsada;
+  }
+
   public set quantidadeUsada(quantidadeUsada: number) { 
     this._quantidadeUsada = Math.floor(quantidadeUsada); 
   }
 
-  public get observacoes() { return this._observacoes; }
-  public set observacoes(observacoes: string) { this._observacoes = observacoes; }
 
-  public get cuidadorId() { return this._cuidadorId; }
-  public set cuidadorId(cuidadorId: string) { this._cuidadorId = cuidadorId; }
+  public get observacoes() {
+    return this._observacoes;
+  }
 
-  public get animalId() { return this._animalId; }
-  public set animalId(animalId: string) { this._animalId = animalId; }
+  public set observacoes(observacoes: string) {
+    this._observacoes = observacoes;
+  }
 
-  public get suprimentoId() { return this._suprimentoId; }
-  public set suprimentoId(suprimentoId: string) { this._suprimentoId = suprimentoId; }
+
+  public get cuidadorId() {
+    return this._cuidadorId;
+  }
+
+  public set cuidadorId(cuidadorId: string) {
+    this._cuidadorId = cuidadorId;
+  }
+
+
+  public get animalId() {
+    return this._animalId;
+  }
+
+  public set animalId(animalId: string) {
+    this._animalId = animalId;
+  }
+
+
+  public get suprimentoId() {
+    return this._suprimentoId;
+  }
+
+  public set suprimentoId(suprimentoId: string) {
+    this._suprimentoId = suprimentoId;
+  }
 }
