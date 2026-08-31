@@ -16,7 +16,7 @@ export class Animal {
   private _necessidades: Necessidade[];
 
 
-  constructor(id: string, nome: string, tipo: TipoAnimal, raca: string, sexo: SexoAnimal, dataNascimento: Date, dataEntradaAbrigo: Date, observacoes: string = '',     status: StatusAnimal = StatusAnimal.ATIVO, necessidades: Necessidade[] = []) {
+  constructor(id: string, nome: string, tipo: TipoAnimal, raca: string, sexo: SexoAnimal, dataNascimento: Date, dataEntradaAbrigo: Date, observacoes: string = '', status: StatusAnimal = StatusAnimal.ATIVO, necessidades: Necessidade[] = []) {
     this._id = id;
     this._nome = nome;
     this._tipo = tipo;
