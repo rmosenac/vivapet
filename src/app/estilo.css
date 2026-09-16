@@ -12,6 +12,11 @@
     --sombra-hover: 0 6px 16px rgba(78, 32, 150, 0.15);
 }
 
+/* RESET E LAYOUT BÁSICO */
+* {
+    box-sizing: border-box;
+}
+
 .container {
     padding: 30px;
     font-family: 'Inter', 'Segoe UI', sans-serif;
@@ -21,36 +26,9 @@
     margin: 0 auto;
 }
 
-/* Alerta no topo absoluto */
-.alerta {
-    padding: 12px 20px;
-    margin-bottom: 25px;
-    background-color: var(--verde-claro);
-    color: var(--roxo-viva);
-    border-left: 4px solid var(--verde-viva);
-    border-radius: 4px;
-    font-weight: 500;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
 .layout-duplo {
     display: flex;
     gap: 40px;
-}
-
-/* Ajustes para alinhar os títulos no mesmo nível */
-.titulo-principal {
-    color: var(--roxo-viva);
-    font-size: 1.6rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.subtitulo {
-    color: var(--texto-mutado);
-    font-size: 1.1rem;
-    margin-top: 0;
-    margin-bottom: 15px;
 }
 
 .coluna-form {
@@ -70,14 +48,54 @@
     flex-direction: column;
 }
 
+/* TIPOGRAFIA PADRÃO */
+.titulo-principal {
+    color: var(--roxo-viva);
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    color: var(--texto-mutado);
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* MENSAGENS E ALERTAS */
+.alerta {
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    background-color: var(--verde-claro);
+    color: var(--roxo-viva);
+    border-left: 4px solid var(--verde-viva);
+    border-radius: 4px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FORMULÁRIOS E INPUTS */
 .formulario {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-/* INPUTS MODERNIZADOS */
-input {
+input,
+select {
     padding: 12px 16px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -87,10 +105,10 @@ input {
     outline: none;
 }
 
-input:focus {
+input:focus,
+select:focus {
     border-color: var(--roxo-viva);
     box-shadow: 0 0 0 3px rgba(78, 32, 150, 0.1);
-    background-color: var(--fundo-branco);
 }
 
 .botoes-form {
@@ -99,7 +117,7 @@ input:focus {
     margin-top: 10px;
 }
 
-/* BOTÕES PADRÃO */
+/* BOTÕES GERAIS */
 .botao {
     padding: 12px;
     cursor: pointer;
@@ -136,11 +154,9 @@ input:focus {
     color: #fff;
 }
 
-/* Botão de atualizar movido para baixo da tabela */
 .botao-atualizar {
     margin-top: 15px;
     align-self: flex-end;
-    /* Alinha o botão à direita na coluna da tabela */
     padding: 10px 20px;
     cursor: pointer;
     background-color: var(--fundo-branco);
@@ -155,7 +171,6 @@ input:focus {
     background-color: var(--bege-claro);
 }
 
-/* BOTÃO DA TABELA (AÇÕES) */
 .botao-editar {
     padding: 6px 12px;
     cursor: pointer;
@@ -173,7 +188,7 @@ input:focus {
     transform: scale(1.05);
 }
 
-/* TABELA MODERNIZADA */
+/* TABELAS PADRONIZADAS */
 .tabela-wrapper {
     max-height: 350px;
     overflow-y: auto;
@@ -231,16 +246,4 @@ input:focus {
     text-align: center;
     color: var(--texto-mutado);
     font-style: italic;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

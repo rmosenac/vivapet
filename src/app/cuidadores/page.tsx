@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import "./cuidador.css";
 
 interface Cuidador {
     id_cuidador: number;
